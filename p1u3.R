@@ -1,6 +1,5 @@
-getwd()
-setwd("/home/chris/Documents/itt/Enero_Junio_2020/Mineria_de_datos/DataMining/MachineLearning/SimpleLinearRegression")
-getwd()
+#alderete delgado angel esteban
+#damaris villegas carmona
 
 # Importing the dataset
 dataset <- read.csv('Salary_Data.csv')

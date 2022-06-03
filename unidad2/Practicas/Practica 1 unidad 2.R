@@ -1,0 +1,77 @@
+Games <- read.csv("GamingD.csv")
+Games <- read.csv(file.choose()) 
+Games 
+
+library("ggplot2")
+library(dplyr) 
+
+#Nature of the data
+head(Games)
+colnames(Games) 
+tail(Games)
+summary(Games)
+
+
+#1.- Creation of scatter plots
+#Videogames produced per year
+Scatplot <- ggplot(Games, aes(x=Platform, y=Year,
+                               color=Genre))+geom_point()
+Scatplot
+#NA Sales by platform
+Scatplot2 <- ggplot(Games, aes(x=NA_Sales, y=Platform,
+                              color=Genre))+geom_point()
+Scatplot2
+
+
+#2. Creation of graphs in facets
+#Facets 1
+v <- ggplot(Games, aes(x=NA_Sales))
+v + geom_histogram(binwidth = 10, aes(fill=Genre),
+                   color="Black")
+
+v + geom_histogram(binwidth = 10, aes(fill=Genre),
+                   color="Black") + facet_grid(Genre~., scales="free")
+
+
+#3. Distribution Graphs
+geo<- filter(Games, Genre == "Action")
+geo
+
+#Sales by year
+ggplot(data=Games, aes(x=Year, y=EU_Sales)) + 
+  geom_point()
+
+    
+
+#Separate the variable that we want to analyze
+x<-Games$EU_Sales
+distribution<-dnorm(x,           
+                    mean = 0.1467,    
+                    sd = 1,      
+                    log = FALSE) 
+
+#Separate the variable that we want to analyze
+x<-Games$EU_Sales
+
+#Plot the normal distribution
+plot(x, dnorm(x, mean = 0.1467, sd = 1), type = "l",
+     ylab = "", lwd = 1, col = "red")
+
+#Graph the normal distribution
+plot(x, dnorm(x, mean = 0.1467, sd = 1),
+     ylab = "", lwd = 1, col = "red")
+
+#Legends and decorating with a theme
+h +
+  xlab("Years") +
+  ylab("Units") +
+  ggtitle("Videogames sales") +
+  theme(axis.title.x = element_text(color = "DarkGreen", size=20),
+        axis.title.y = element_text(color = "Red", size=20),
+        axis.text.x = element_text(color="Black",size = 5),
+        axis.text.y = element_text(color="Black",size = 5),
+        legend.title = element_text(size = 20),
+        legend.text = element_text(size = 20),
+        legend.position = c(1,1),
+        legend.justification = c(1,1),
+        plot.title = element_text(color = "DarkGreen",size = 25))

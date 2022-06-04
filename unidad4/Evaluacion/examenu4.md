@@ -94,8 +94,13 @@ plot(iris.new[c(1,2)], col=iris.class)# Trazar para ver cómo los puntos de dato
 plot(iris.new[c(3,4)], col=result$cluster)# Trazar para ver cómo los puntos de datos Petal.Length y Petal.Width se han distribuido en clústeres
 plot(iris.nuevo[c(3,4)], col=iris.clase)
 
+<img alt="Evidence1" src="https://github.com/AngelEsteban124020/repositoriou1/blob/Unidad-4/unidad4/Evaluacion/img/c2.PNG">
+<img alt="Evidence1" src="https://github.com/AngelEsteban124020/repositoriou1/blob/Unidad-4/unidad4/Evaluacion/img/c3.PNG">
+
+
 #Muestra a qué tipo de flor pertenece en el racimo
 table(resultado$cluster,iris.class)
+<img alt="Evidence1" src="https://github.com/AngelEsteban124020/repositoriou1/blob/Unidad-4/unidad4/Evaluacion/img/c4.PNG">
 
 biblioteca (clúster)
 clusplot(iris, resultado$cluster, color=T, sombra=T, etiquetas=0, lineas=0)

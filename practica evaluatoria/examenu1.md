@@ -61,20 +61,20 @@ le_dfMerge <- merge(stats, Life_Expectancy, by.x = "Country.Code", by.y = "Count
 #tabla de comparacion con las diferentes fechas
 le_dfMerge
 
-#Se muestra la expectativa de vida del año 1960
+# Se muestra la expectativa de vida del año 1960
 qplot(data = le_dfMerge, y = Life_Expectancy_1960, x = Fertility.Rate)
 
-#Se muestra la expectativa de vida del año 2013
+# Se muestra la expectativa de vida del año 2013
 qplot(data = le_dfMerge, y = Life_Expectancy_2013, x = Fertility.Rate)
 
-#grafica correspondiente al año 1960 comparando la fertilizada con la expectativa de vida por pais
+# grafica correspondiente al año 1960 comparando la fertilizada con la expectativa de vida por pais
 qplot(data = le_dfMerge, x = Fertility.Rate, y = Life_Expectancy_1960, color = Country.Name, size=I(5), shape=I(19), alpha =I(.5), main = "Fertility Rate vs Life Expectancy by Country in 1960")
 
-#grafica correspondiente al año 2013, comparando la tasa de fertilidad y expectativa de vida por cada pais
+# grafica correspondiente al año 2013, comparando la tasa de fertilidad y expectativa de vida por cada pais
 qplot(data = le_dfMerge, x = Fertility.Rate, y = Life_Expectancy_2013, color = Country.Name, size=I(5), shape=I(19), alpha =I(.5), main = "Fertility Rate vs Life Expectancy by Country in 2013")
 
-#grafica de cada region comparando la tasa de fertilidad con la expectativa de vida en 1960
+# grafica de cada region comparando la tasa de fertilidad con la expectativa de vida en 1960
 qplot(data = le_dfMerge, x = Fertility.Rate, y = Life_Expectancy_1960, color = Region, size=I(2), shape=I(19), alpha =I(.5), main = "Fertility Rate vs Life Expectancy by Region in 1960")
 
-#grafica de cada region comparando la tasa de fertilidad con la expectativa de vida en 2013
+# grafica de cada region comparando la tasa de fertilidad con la expectativa de vida en 2013
 qplot(data = le_dfMerge, x = Fertility.Rate, y = Life_Expectancy_2013, color = Region, size=I(2), shape=I(19), alpha =I(.5), main = "Fertility Rate vs Life Expectancy by Region in 2013")

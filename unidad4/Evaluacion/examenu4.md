@@ -46,6 +46,7 @@ biblioteca (conjuntos de datos)
 datos ("iris")
 resumen (iris)
 iris
+<img alt="Evidence1" src="https://github.com/AngelEsteban124020/repositoriou1/blob/Unidad-4/unidad4/Evaluacion/img/c1.PNG">
 
 str(iris) #ver la estructura del conjunto de datos
 resumen (iris) #ver resumen estadístico del conjunto de datos

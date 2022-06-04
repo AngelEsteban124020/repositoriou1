@@ -7,7 +7,7 @@ Mineria de datos unidad 1
 - Probar la ley de los numeros grandes
 Cree una secuencia de comandos R que contará cuántos de estos 
 números se encuentran entre -1 y 1 y dividirá por la cantidad total de N
-1. :page_facing_up: [Practica 1](./practicas/../p1.md) 
+1. :page_facing_up: [Practica 1](https://github.com/AngelEsteban124020/repositoriou1/blob/unidad1/practicas/p1.md) 
 
 # Practica 2
 - Funciones
